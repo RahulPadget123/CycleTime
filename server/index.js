@@ -31,9 +31,9 @@ function generatePassword(length = 8) {
   return crypto.randomBytes(length).toString('hex').slice(0,length);
 }
 
-app.get("/",(req, res)=>{
-  res.send("hello");
-});
+// app.get("/",(req, res)=>{
+//   res.send("Start");
+// });
 
 //Admin creates user
 app.post('/admin/create-user', async (req,res) => {
@@ -290,6 +290,17 @@ app.get('/export-home-csv', async (req, res) => {
     res.status(500).json({ error: 'Failed to export data' });
   }
 });
+
+app.get('/',(req,res) => {
+  res.send(`
+  <!DOCTYPE html>
+  <html>
+  <body>
+    <button onclick ="window.location.href='https://cycle-time-login.onrender.com'">start</button>
+  </body>
+  </html>
+  `)
+})
 
 app.listen(3001, () => {
   console.log("server is running");
