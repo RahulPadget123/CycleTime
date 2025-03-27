@@ -296,7 +296,7 @@ app.get('/',(req,res) => {
   <!DOCTYPE html>
   <html>
   <body>
-    <button onclick ="window.location.href='https://cycle-time-login.onrender.com'">start</button>
+    <button onclick ="window.location.href='https://https://cycletime-1.onrender.com/'">start</button>
   </body>
   </html>
   `)
