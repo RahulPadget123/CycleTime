@@ -31,6 +31,10 @@ function generatePassword(length = 8) {
   return crypto.randomBytes(length).toString('hex').slice(0,length);
 }
 
+app.get("/",(req, res)=>{
+  res.send("hello");
+});
+
 //Admin creates user
 app.post('/admin/create-user', async (req,res) => {
   const {email,isAdmin} = req.body;  //isAdmin to check if request is from admin
