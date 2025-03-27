@@ -291,17 +291,6 @@ app.get('/export-home-csv', async (req, res) => {
   }
 });
 
-app.get('/',(req,res) => {
-  res.send(`
-  <!DOCTYPE html>
-  <html>
-  <body>
-    <button onclick ="window.location.href='https://cycletime-1.onrender.com/'">start</button>
-  </body>
-  </html>
-  `)
-})
-
 app.listen(3001, () => {
   console.log("server is running");
 });
